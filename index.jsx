@@ -368,8 +368,8 @@ Validation.Input = React.createClass({
         var value = this.props.value || '';
         this.isCheckbox = this.props.type === 'checkbox';
 
-        if (this.isCheckbox && !this.props.checked) {
-            value = '';
+        if (this.isCheckbox ) {
+            value = this.props.checked;
         }
 
         return {
@@ -392,7 +392,7 @@ Validation.Input = React.createClass({
         var isEventPassed = (event && event.nativeEvent instanceof Event);
 
         if (this.isCheckbox) {
-            value = !this.state.checked ? this.props.value : '';
+            value = !this.state.checked ? this.props.value : this.props.checked;
         }
 
         if (isEventPassed) {

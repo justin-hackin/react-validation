@@ -443,10 +443,10 @@ Validation.Input = React.createClass({
             input = <input {...this.props} className={this.state.className} checked={this.state.checked} value={this.state.value} onChange={this._handleChange} onBlur={this._handleBlur}/>;
         }
         // TODO: rework hint appearance
-        debugger;
+
         return <div style={this.props.componentStyle}>
             {input}
-            <span className={errors.defaultHintClassName}>eatme{this.state.errorMessage}</span>
+            <span className={errors.defaultHintClassName}>{this.state.errorMessage}</span>
         </div>;
     }
 });

@@ -114,8 +114,8 @@ Validation.Form = React.createClass({
         var isCheckbox = component.props.type === 'checkbox';
         var value = validator.trim(component.props.value);
 
-        if (isCheckbox && !component.props.checked) {
-            value = '';
+        if (isCheckbox) {
+            value = component.props.checked;
         }
 
         return callback.call(this, value);

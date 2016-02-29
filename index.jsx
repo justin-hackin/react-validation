@@ -444,7 +444,7 @@ Validation.Input = React.createClass({
         }
         // TODO: rework hint appearance
 
-        return <div>
+        return <div style={this.props.componentStyle}>
             {input}
             <span className={errors.defaultHintClassName}>{this.state.errorMessage}</span>
         </div>;
